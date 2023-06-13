@@ -1,19 +1,24 @@
 package rover;
 
+import rover.Comandos.*;
+
 public class Prueba {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) {		
 		try {
-			Cuadricula pruebaCuadricula = new Cuadricula(5,8);
+			Cuadricula cuadricula = new Cuadricula(5,5);
+			IComando[] comandos = new IComando[] 
+			{
+				new ComandoLeft(),
+				new ComandoMove(),
+				new ComandoRight()
+			};
+			Coordenada actual = new Coordenada(1,2,'N');
 			
-			System.out.println("Max X es igual a " +  pruebaCuadricula.getMaxX());
-			System.out.println("Max Y es igual a " +  pruebaCuadricula.getMaxY());
+			Rover rover = new Rover(cuadricula, actual, comandos);			
+			rover.ProcesoDeInstrucciones("LMLMLMLMM");
 			
-			Coordenada pruebaCoordenada = new Coordenada(8,9,'i');
-		
-					
-			pruebaCuadricula.EsCoordenadaValida(pruebaCoordenada);
+			System.out.println(rover.getPosicion());
 		} catch (IllegalArgumentException ex) {
 			System.out.println(ex.getMessage());
 		}
