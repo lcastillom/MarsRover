@@ -6,8 +6,10 @@ Entrada
 
 Suponga que la esquina suroeste de la cuadrícula es 0,0 (el origen). La primera línea de entrada establece los límites de la cuadrícula de exploración al indicar las coordenadas correspondientes a la esquina noreste de la meseta. A continuación, cada rover recibe sus instrucciones por turno. Las instrucciones de cada rover consisten en dos líneas de cadenas. La primera cadena confirma la posición y el rumbo actuales del móvil. La segunda cadena consta de instrucciones de giro/movimiento
 
-5 5 
-1 2 N 
+5 5  
+
+1 2 N  
+ 
 LMLMLMLMM 
 
 Salida
